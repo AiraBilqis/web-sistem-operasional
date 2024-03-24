@@ -30,7 +30,7 @@ a:focus {
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #354052;
+  background: #39706C;
   color: #adb5bd;
   margin-left: -250px;
   transition: all 0.5s;
@@ -43,7 +43,7 @@ a:focus {
 
 
 .sidebar-header {
-  background: #313b4c;
+  background: #39706C;
   color: #adb5bd;
 }
 
@@ -59,7 +59,7 @@ a:focus {
 
 .collapse.show, 
 .collapsing {
-  background: #313b4c;
+  background: #39706C;
 }
 
 .nav-item {
@@ -70,16 +70,16 @@ a:focus {
 
 .nav-item.open {
   color: #e9ecef;
-  background: #313b4c;
+  background: #39706C;
 }
 
 .nav-item.active {
   color: #e9ecef;
-  background: #2d3646 !important;
+  background: #499d97 !important;
 }
 
 .nav-item:hover {
-  background: #313b4c;
+  background: #4aa59f;
   color: #fff;
   transition: .2s;
 }
