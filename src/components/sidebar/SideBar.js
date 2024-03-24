@@ -1,12 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faBriefcase,
-  faPaperPlane,
-  faQuestion,
-  faImage,
-  faCopy,
+  faUser,
+  faMoneyBill,
+  faInfoCircle,
+  faTruck,
   faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import SubMenu from "./SubMenu";
@@ -26,50 +24,43 @@ class SideBar extends React.Component {
           >
             <FontAwesomeIcon icon={faTimes} pull="right" size="xs" />
           </Button>
-          <h3>react-bootstrap sidebar</h3>
+          <h3>Admin</h3>
         </div>
 
         <Nav className="flex-column pt-2">
-          <p className="ml-3">Heading</p>
+          <small className="ml-3">Dashboard</small>
 
           <Nav.Item className="active">
-            <Nav.Link href="/">
-              <FontAwesomeIcon icon={faHome} className="mr-2" />
-              Home
+            <Nav.Link href="/status-supir">
+              <FontAwesomeIcon icon={faUser} className="mr-2" />
+              Status Supir
             </Nav.Link>
           </Nav.Item>
 
-          <SubMenu
+          {/* <SubMenu
             title="Pages"
             icon={faCopy}
             items={["Link", "Link2", "Active"]}
-          />
+          /> */}
 
           <Nav.Item>
-            <Nav.Link href="/">
-              <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
-              About
+            <Nav.Link href="/surat-jalan-supir">
+              <FontAwesomeIcon icon={faTruck} className="mr-2" />
+              Surat Jalan Supir
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link href="/">
-              <FontAwesomeIcon icon={faImage} className="mr-2" />
-              Portfolio
+              <FontAwesomeIcon icon={faMoneyBill} className="mr-2" />
+              Gaji Supir
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link href="/">
-              <FontAwesomeIcon icon={faQuestion} className="mr-2" />
-              FAQ
-            </Nav.Link>
-          </Nav.Item>
-
-          <Nav.Item>
-            <Nav.Link href="/">
-              <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
-              Contact
+              <FontAwesomeIcon icon={faInfoCircle} className="mr-2" />
+              Website
             </Nav.Link>
           </Nav.Item>
         </Nav>
