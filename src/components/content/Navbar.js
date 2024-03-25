@@ -4,6 +4,10 @@ import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Button, Nav } from "react-bootstrap";
 
 class NavBar extends React.Component {
+  handleLogout = () => {
+    window.localStorage.clear();
+    window.location.href = '/login';
+  }
   render() {
     return (
       <>
@@ -16,14 +20,11 @@ class NavBar extends React.Component {
             <FontAwesomeIcon icon={faAlignLeft} />
           </Button>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          {/* <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto" navbar>
-              <Nav.Link href="#">Page 1</Nav.Link>
-              <Nav.Link href="#">Page 2</Nav.Link>
-              <Nav.Link href="#">Page 3</Nav.Link>
-              <Nav.Link href="#">Page 4</Nav.Link>
+              <Nav.Link onClick={this.handleLogout}>Log Out</Nav.Link>
             </Nav>
-          </Navbar.Collapse> */}
+          </Navbar.Collapse>
         </Navbar>
       </>
     );

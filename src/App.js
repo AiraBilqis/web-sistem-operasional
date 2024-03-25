@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import Content from './components/content/Content';
-
+import Registration from './Pages/auth/Registration/Registration';
+import Login from './Pages/auth/Login/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -52,10 +54,22 @@ class App extends React.Component {
   };
 
   render() {
+    const isLogin = localStorage.getItem('isLogin');
     return (
       <div className="App wrapper">
-        <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
-        <Content toggle={this.toggle} isOpen={this.state.isOpen} />
+        {isLogin ? (
+          <>
+            <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
+            <Content toggle={this.toggle} isOpen={this.state.isOpen} />
+          </>
+        ) : (
+          <Router>
+            <Routes>
+              <Route exact path="/register" element={<Registration />} />
+              <Route exact path="/login" element={<Login />} />
+            </Routes>
+          </Router>
+        )}
       </div>
     );
   }
